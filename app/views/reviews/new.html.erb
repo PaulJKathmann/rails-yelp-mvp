@@ -1,0 +1,5 @@
+<%= render "shared/navbar", restaurant: @restaurant %>
+<div class="container py-3">
+  <h1>Write a review for <%= @restaurant.name %></h1>
+  <p><%= render 'form', review: @review, restaurant: @restaurant %></p>
+</div>

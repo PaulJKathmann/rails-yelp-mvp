@@ -1,0 +1,18 @@
+<%= render "shared/navbar", restaurant: @restaurant %>
+<div class="container py-3">
+  <h1>Restaurants</h1>
+  <p>List of all Restaurants</p>
+  <% @restaurants.each do |r| %>
+    <div class="card">
+      <div class="d-flex pt-3 justify-content-between">
+        <div class="container">
+          <h2><%= link_to r.name, restaurant_path(r)  %></h2>
+          <p><%= r.address %></p>
+        </div>
+        <div class="mr-3">
+          <p>Category: <%= r.category.capitalize! %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
